@@ -1,27 +1,43 @@
-# Initium
+# Initium Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+[Ссылка на cайт](https://initium-test-akor.netlify.app)
 
-## Development server
+## Содержание
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Технологии](#технологии)
+- [Функциональность](#функциональность)
+- [Источники](#источники)
 
-## Code scaffolding
+## Технологии
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 16.2.12.
+- RxJS
+- HTML
+- SCSS
+- TypeScript
 
-## Build
+## Функциональность
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Сделать верстку по дизайну:
+  + https://www.figma.com/file/e7KSLDJU0l96avRM3tQfaT/Тестовое-задание-Initium?node-id=3%3A9
+* Начальная загрузка записей при первом запуске приложения:
+  + GET запрос https://test-data.directorix.cloud/task1
+* Добавление записей:
+  + Пользователь должен иметь возможность создавать новые записи в таблице, через модальное окно.
+* Изменение записей:
+  + Пользователь должен иметь возможность изменить в записи какие либо данные, через модальное окно.
+* Удаление записей:
+  + Пользователь должен иметь возможность выбрать несколько (или одну) записей и удалить из таблицы.
+* При создании новых записей реализовать проверку полей по написанию и валидности, а то есть:
+  + Поле Имя должно быть обязательным, минимум 2-а символа.
+  + Поле Фамилия должно быть обязательным, минимум 2-а символа.
+  + Поле Email должно быть обязательным и валидным как email.
+  + Поле телефон должно быть валидным для номеров российских операторов связи.
 
-## Running unit tests
+Бонусное задание
+* Локальное хранилище.
+  + Сделайте так, чтобы данные таблицы сохранялись в локальном хранилище браузера, чтобы они не исчезали при перезагрузке страницы.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Источники
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Макет Figma](https://www.figma.com/file/Gz2gyFGhowggdvNwNNDK5o/Online-Shopping-Website-Design---eCommerce-Store-Website---UI-Kit-(Community)?mode=dev](https://www.figma.com/file/e7KSLDJU0l96avRM3tQfaT/Тестовое-задание-Initium?node-id=3%3A9)https://www.figma.com/file/e7KSLDJU0l96avRM3tQfaT/Тестовое-задание-Initium?node-id=3%3A9)
