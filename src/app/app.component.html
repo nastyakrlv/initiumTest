@@ -21,7 +21,7 @@
         <td>
           <mat-checkbox color="primary" [checked]="user.checked" (change)="updateCheckboxes(i)"></mat-checkbox>
         </td>
-        <td class="name" (click)="openDialogChangeClient(i)">{{ user.name }}</td>
+        <td class="name" (click)="openDialogChangeClient(i, user)">{{ user.name }}</td>
         <td>{{ user.surname }}</td>
         <td>{{ user.email }}</td>
         <td>{{ user.phone }}</td>

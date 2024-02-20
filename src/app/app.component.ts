@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ClientDataService} from "./client-data.service";
 import {catchError, Observable, ReplaySubject, takeUntil, throwError} from "rxjs";
 import {HttpErrorResponse} from "@angular/common/http";
-import {IClientsData} from "./client.interface";
+import {IClient, IClientsData} from "./client.interface";
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {AddNewClientComponent} from "./add-new-client/add-new-client.component";
 import {DeleteClientsComponent} from "./delete-clients/delete-clients.component";
@@ -91,14 +91,14 @@ export class AppComponent implements OnDestroy, OnInit {
     });
   }
 
-  public openDialogChangeClient(selectedUser: number) {
+  public openDialogChangeClient(selectedUserIndex: number, selectedUser: IClient) {
     const dialogRef: MatDialogRef<ChangeClientComponent> = this._dialogRef.open(ChangeClientComponent, {
-      data: {name: this.name, surname: this.surname, email: this.email, phone: this.phone, checked: this.checked},
+      data: {name: selectedUser.name, surname: selectedUser.surname, email: selectedUser.email, phone: selectedUser.phone, checked: selectedUser.checked},
     })
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.clients.users[selectedUser] = result;
+        this.clients.users[selectedUserIndex] = result;
         localStorage.setItem('clients', JSON.stringify(this.clients));
       }
     });

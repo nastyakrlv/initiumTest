@@ -16,10 +16,10 @@ export class ChangeClientComponent {
     @Inject(MAT_DIALOG_DATA) public data: IClient,
   ) {
     this.changeClientForm = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.minLength(2)]),
-      surname: new FormControl('', [Validators.required, Validators.minLength(2)]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', [Validators.pattern(/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/)])
+      name: new FormControl(data.name, [Validators.required, Validators.minLength(2)]),
+      surname: new FormControl(data.surname, [Validators.required, Validators.minLength(2)]),
+      email: new FormControl(data.email, [Validators.required, Validators.email]),
+      phone: new FormControl(data.phone, [Validators.pattern(/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/)])
     })
 
     this.changeClientForm.valueChanges.subscribe(value => {
