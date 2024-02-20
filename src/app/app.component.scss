@@ -35,6 +35,7 @@ main {
         color: #A8B0BF;
       }
     }
+
     .delete {
       margin-left: 0;
     }
@@ -43,10 +44,20 @@ main {
       width: 100%;
       border-collapse: collapse;
 
-      input.checkbox {
+      .name:hover {
+        color: #295DC7;
+        text-decoration: underline;
+      }
+
+      input[type="checkbox"] {
         width: 20px;
         height: 20px;
         cursor: pointer;
+        accent-color: #4A95F7 !important;
+
+        &:indeterminate {
+          accent-color: #4A95F7 !important;
+        }
       }
 
       th {
@@ -60,21 +71,22 @@ main {
 
       tr {
         height: 47px;
-
-        &:not(:first-child):hover {
-          background-color: #F1F5F9;
-          cursor: pointer;
-        }
       }
 
-      th:nth-child(1), td:nth-child(1) {
+      tbody tr:hover {
+        background-color: #F1F5F9;
+        cursor: pointer;
+      }
+
+      th:first-child, td:first-child {
         text-align: center;
-        max-width: 24px;
+        width: 50px;
       }
-      th:nth-child(2), td:nth-child(2) {
+      th:nth-child(2), th:nth-child(3), td:nth-child(2), td:nth-child(2) {
         text-align: left;
       }
-      th:nth-child(n+3), td:nth-child(n+3) {
+
+      th:nth-child(n+4), td:nth-child(n+4) {
         text-align: right;
       }
 
