@@ -12,7 +12,8 @@ export class DeleteClientsComponent {
   constructor(
     public dialogRef: MatDialogRef<DeleteClientsComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IDeleteClient,
-  ) {}
+  ) {
+  }
 
   public onNoClick(): void {
     this.dialogRef.close();

@@ -10,10 +10,9 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { AddNewClientComponent } from './add-new-client/add-new-client.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
 import { DeleteClientsComponent } from './delete-clients/delete-clients.component';
 import { ChangeClientComponent } from './change-client/change-client.component';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
@@ -35,7 +34,7 @@ import { ChangeClientComponent } from './change-client/change-client.component';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

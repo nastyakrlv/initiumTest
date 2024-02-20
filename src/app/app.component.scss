@@ -22,6 +22,8 @@ main {
       cursor: pointer;
       border-radius: 50%;
       margin: 10px;
+      height: 36px;
+      width: 36px;
 
       &:hover {
         background-color: #E2EEFF;
@@ -82,6 +84,7 @@ main {
         text-align: center;
         width: 50px;
       }
+
       th:nth-child(2), th:nth-child(3), td:nth-child(2), td:nth-child(2) {
         text-align: left;
       }
@@ -92,7 +95,7 @@ main {
 
       th:not(:first-child):not(:last-child),
       td:not(:first-child):not(:last-child) {
-        width: calc( 50% / 3);
+        width: calc(60% / 4);
 
         @media (max-width: 768px) {
           width: auto;

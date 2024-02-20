@@ -14,23 +14,21 @@ export class ChangeClientComponent {
   constructor(
     public dialogRef: MatDialogRef<ChangeClientComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IClient,
-
   ) {
     this.changeClientForm = new FormGroup({
-      name:  new FormControl('', [Validators.required, Validators.minLength(2)]),
-      surname:  new FormControl('', [Validators.required, Validators.minLength(2)]),
+      name: new FormControl('', [Validators.required, Validators.minLength(2)]),
+      surname: new FormControl('', [Validators.required, Validators.minLength(2)]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', [Validators.required, Validators.pattern(/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/)])
+      phone: new FormControl('', [Validators.pattern(/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/)])
     })
 
     this.changeClientForm.valueChanges.subscribe(value => {
-      this.data = { ...this.data, ...value };
+      this.data = {...this.data, ...value};
     });
   }
 
   public onNoClick(): void {
     this.dialogRef.close();
   }
-
 }
 
